@@ -7,6 +7,12 @@ This repository is for making combined List-KR filter for Ad-Blockers which does
 * This filter is **unofficial** and uses List-KR.
 * **DO NOT** open issues on official filter repository when using this.
 
+## How to use
+
+Add following URL to your Ad-Blocker.
+```
+https://raw.githubusercontent.com/HelloKS/list-kr-flat/latest/list-kr-flat.txt
+```
 ## Related Issue
 
 * [List-KR/List-KR#795](https://github.com/List-KR/List-KR/issues/795)
