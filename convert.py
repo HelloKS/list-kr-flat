@@ -22,10 +22,7 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
         elif line.startswith('! '):
             header += line + '\n'
             if "Version: " in line:
-                with open('CHANGELOG.md', 'w', encoding="UTF-8") as f:
-                    f.write("Updated at: " + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + "\n")
-                    f.write("Filter version: " + line.replace("! Version: ", "") + "\n")
-                with open('VERSION', 'w', encoding="UTF-8") as f:
+                with open('./dist/README.md', 'w', encoding="UTF-8") as f:
                     f.write(line.replace("! Version: ", ""))
 
     flattened_filter = header + '\n'
@@ -34,8 +31,6 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
         with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/' + sub_filter) as response:
             sub_filter_content = response.read().decode('utf-8')
             flattened_filter += '!\n! Filter: ' + sub_filter + '\n!\n' + sub_filter_content + '\n'
-
-    os.makedirs("./dist")
 
     with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
        f.write(flattened_filter)
