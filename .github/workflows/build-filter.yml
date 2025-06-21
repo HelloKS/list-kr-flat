@@ -1,0 +1,54 @@
+name: Build filterlists
+
+on:
+  push:
+    branches: [ main ]
+
+  schedule:
+  - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Download repo
+      uses: actions/checkout@v4
+
+    - name: Runnning generation script
+      shell: bash
+      run: |
+        python ./convert.py 2>&1
+
+    - name: Generate tag name
+      run: echo "TAG_NAME=$(cat VERSION)" >> $GITHUB_ENV
+
+    - name: Check if update is necessary
+      uses: mukunku/tag-exists-action@v1.6.0
+      id: check-tag
+      with:
+        tag: ${{ env.TAG_NAME }}
+
+    - name: Release filter lists
+      uses: softprops/action-gh-release@v2
+      with:
+        files: dist/list-kr-flat.txt
+        name: Automatic list generation
+        tag_name: ${{ env.TAG_NAME }}
+        body_path: CHANGELOG.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: steps.check-tag.outputs.exists == 'false'
+
+    - name: Delete older releases
+      uses: sgpublic/delete-release-action@v1.2
+      with:
+        release-drop: true
+        release-keep-count: 2
+        release-drop-tag: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: steps.check-tag.outputs.exists == 'false'
