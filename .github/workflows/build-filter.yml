@@ -43,7 +43,7 @@ jobs:
         git config --local user.email "autoupdate@githubactions.com"
         git config --local user.name "Github Action"
         git add .
-        git commit -a -m $(README.md)
+        git commit -a -m $(cat README.md)
       if: ${{ env.IS_LATEST == '' }}
     
     - name: Push release repo
