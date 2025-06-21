@@ -30,6 +30,7 @@ jobs:
         python ./convert.py 2>&1
     
     - name: Check if update is necessary
+      continue-on-error: true
       working-directory: ./dist
       shell: bash
       run: |
