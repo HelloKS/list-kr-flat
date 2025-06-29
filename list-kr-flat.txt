@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0627.0
+! Version: 2025.0628.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -1874,6 +1874,7 @@ search.danawa.com##li[style][id^="ad"]
 quasarzone.com##div[id^="bidrich_"][style*=" "]
 mobile.missyusa.com##.div_banner
 app.dcinside.com,m.dcinside.com##*[class^="adv-group"]
+app.dcinside.com,m.dcinside.com##li.adv-inner
 url.kr##form[method="post"] > #maskLayer
 m.tinnews.co.kr##.bn
 etoland.co.kr###m_main_attendance_wrap ~ a[href^="../../plugin/mobile/board.php?bo_table=market_"]
