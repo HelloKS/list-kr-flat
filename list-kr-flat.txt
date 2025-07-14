@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0711.0
+! Version: 2025.0714.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -542,6 +542,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: filters-share/specific_URL.txt
 !
+||t1.daumcdn.net/top/daum/op/smartfarm/
 ||cdn.lol.ps/static/prod/*/_app/immutable/assets/banner-
 ||platformgreat.kr/coupang_1.jpg
 ||maplescouter.com/ads/
@@ -1633,6 +1634,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 
+www.daum.net##div[aria-hidden="true"].imgdeco_below
 ppomppu.co.kr##div[align="center"] > #header_box ~ div[style*="min-height:100px;"]
 lol.ps##main[style^="cursor: default;"][class="desktop:min-w-[1280px]"] > div[class^="modal-"]
 lol.ps##.overflow-x-hidden > div[class*="inset-x-0 top-[80px]"]
