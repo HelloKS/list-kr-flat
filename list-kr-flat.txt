@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0915.0
+! Version: 2025.0915.1
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -1833,7 +1833,6 @@ new-m.pay.naver.com##div[class^="AdReward_list_"] > div[class^="ADRewardGladBann
 bbs.ruliweb.com##div[style*=" "] > div[id][style].relative
 bbs.ruliweb.com##div[class^="adrr_"]
 bbs.ruliweb.com##div[style].ti_wrapper
-en.namu.wiki##article h1 ~ div[class] > div[id]:has(> iframe[id^="google_ads_iframe_"])
 vietnamguide.co.kr##.T4Tutorials
 m.ruliweb.com##.aaddr_m_reward
 damoang.net##img[src*="/data/file/main/"]
