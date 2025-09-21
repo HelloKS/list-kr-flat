@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0918.0
+! Version: 2025.0921.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -8,7 +8,7 @@
 ! Version must be UTC format.
 
 !
-! Filter: filters-share/3rd_domains.txt
+! Filter: adblocking/filters-share/3rd_domains.txt
 !
 ||mman.kr^
 ||admize.io^
@@ -257,7 +257,7 @@
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/1st_domains.txt
+! Filter: adblocking/filters-share/1st_domains.txt
 !
 ||ad.kakaobank.com^
 ||ad-pulse.kakaobank.cloud^
@@ -410,7 +410,7 @@
 ||infolinks.com^
 ||adcastmarket.com^
 !
-! Filter: filters-share/general_elemhide.txt
+! Filter: adblocking/filters-share/general_elemhide.txt
 !
 ##amp-ad
 ##iframe[src*="//authanalysis.com/"]
@@ -497,7 +497,7 @@
 ##div[id^="targetpushAd_"]
 ##iframe[src*="clickon.kr"]
 !
-! Filter: filters-uBO/specific_ELEMHIDE.txt
+! Filter: adblocking/filters-uBO/specific_ELEMHIDE.txt
 !
 m.cafe.naver.com##.banner_add:matches-path(/ca-fe\\/web\\/cafes\\/(dieselmania|11262350)(\\/|\\?)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/(&|\\.|\\?)clubid=11262350(&|$)/)
@@ -534,7 +534,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(anycal
 m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steamindiegame|27842958)(\\/|\\?)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/(&|\\.|\\?)clubid=27842958($|&)/)
 !
-! Filter: filters-share/general_url.txt
+! Filter: adblocking/filters-share/general_url.txt
 !
 ! ndsoft.co.kr - An internet press hosting service
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/bannerManager\//$match-case
@@ -548,11 +548,11 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
 !
-! Filter: filters-uBO/general_url.txt
+! Filter: adblocking/filters-uBO/general_url.txt
 !
 !
 !
-! Filter: filters-share/specific_URL.txt
+! Filter: adblocking/filters-share/specific_URL.txt
 !
 ||news.sbs.co.kr/js/news-player/player.adInfoUrlList.js
 ||11st.co.kr/js/ver/*/powerLink.js
@@ -1601,7 +1601,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/specific_ELEMHIDE.txt
+! Filter: adblocking/filters-share/specific_ELEMHIDE.txt
 !
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,dprime.kr,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
@@ -3103,7 +3103,7 @@ torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/allowlist.txt
+! Filter: adblocking/filters-share/allowlist.txt
 !
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
@@ -3155,7 +3155,7 @@ x86.co.kr#@#.download_ad
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/extended_css_ELEMHIDE.txt
+! Filter: adblocking/filters-share/extended_css_ELEMHIDE.txt
 !
 search.naver.com##li:matches-attr("/-[a-z]+-[a-z]+$/"="*nad-*")
 namu.wiki#?##app div[class*=" "] > div[class*=" "]:is(:has(div[id][class]:empty), :has(iframe[id^="google_ads_iframe_"])):matches-css(margin-bottom: /[0-9]{2,}/)
@@ -3306,7 +3306,7 @@ zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table=
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/extended_css_INJECTION.txt
+! Filter: adblocking/filters-share/extended_css_INJECTION.txt
 !
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
@@ -3344,7 +3344,7 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-uBO/specific_REDIRECT.txt
+! Filter: adblocking/filters-uBO/specific_REDIRECT.txt
 !
 ||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com,redirect=noop.js
 ||video.veilduck.app^$redirect=noop-1s.mp4
@@ -3358,7 +3358,7 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
 !
-! Filter: filters-uBO/extended_css_ELEMHIDE.txt
+! Filter: adblocking/filters-uBO/extended_css_ELEMHIDE.txt
 !
 pedia.watcha.com#?#div[class] > section[class*=" "]:has(> section > a h3 > p:has-text( · AD))
 m.ruliweb.com#?#.TimelineHeaderMargin ~ div .infinite-scroll-component > div:has(span[style*="max-height:"]:has-text(AD))
@@ -3423,11 +3423,11 @@ blacktoon302.com,blacktoon303.com,blacktoon304.com,blacktoon305.com,blacktoon306
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-uBO/extended_css_INJECTION.txt
+! Filter: adblocking/filters-uBO/extended_css_INJECTION.txt
 !
 !
 !
-! Filter: filters-uBO/scriptlets.txt
+! Filter: adblocking/filters-uBO/scriptlets.txt
 !
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 !
@@ -3517,15 +3517,15 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/javascript.txt
+! Filter: adblocking/filters-share/javascript.txt
 !
 !
 !
-! Filter: filters-uBO/javascript.txt
+! Filter: adblocking/filters-uBO/javascript.txt
 !
 !
 !
-! Filter: filters-uBO/antiadblock.txt
+! Filter: adblocking/filters-uBO/antiadblock.txt
 !
 ! ##+js(acis, document.addEventListener, /adscale_slot_id/)
 asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,untitle.org,seo-marketing.co.kr##+js(acis, document.addEventListener, /adscale_slot_id/)
@@ -3604,8 +3604,7 @@ klauncher.kr##+js(aeld, load, _0x)
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
 hub.weirdhost.xyz##+js(no-fetch-if, adblockanalytics.com)
 hub.weirdhost.xyz##+js(no-fetch-if, adsbygoogle.js)
-srank.kr##+js(no-fetch-if, doubleclick.net)
-@@://www3.doubleclick.net^|$xmlhttprequest,domain=srank.kr
+||www3.doubleclick.net^$script,redirect=noop.js,domain=srank.kr
 @@||adservice.google.com^|$xmlhttprequest,domain=klauncher.kr
 chmodi.tistory.com##.floatdiv
 svrforum.com##body > div[class][style*="box-shadow:"]
@@ -3678,19 +3677,271 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-share/removeparam.txt
+! Filter: adblocking/filters-share/removeparam.txt
 !
 ||newspic.kr^$removeparam=cp
 !
-! Filter: filters-uBO/allowlist.txt
+! Filter: adblocking/filters-uBO/allowlist.txt
 !
 auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 !
-! Filter: filters-uBO/specific_URL.txt
+! Filter: adblocking/filters-uBO/specific_URL.txt
 !
 !
 !
-! Filter: filters-share/specific_CSS.txt
+! Filter: analytics/filters-share/3rd_domains.txt
+!
+!
+!
+! Filter: analytics/filters-share/1st_domains.txt
+!
+!
+!
+! Filter: analytics/filters-share/general_elemhide.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: analytics/filters-share/general_url.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/general_url.txt
+!
+!
+!
+! Filter: analytics/filters-share/specific_URL.txt
+!
+!
+!
+! Filter: analytics/filters-share/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: analytics/filters-share/allowlist.txt
+!
+!
+!
+! Filter: analytics/filters-share/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: analytics/filters-share/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/specific_REDIRECT.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/scriptlets.txt
+!
+!
+!
+! Filter: analytics/filters-share/javascript.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/javascript.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/antiadblock.txt
+!
+!
+!
+! Filter: analytics/filters-share/removeparam.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/allowlist.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/specific_URL.txt
+!
+!
+!
+! Filter: annoyance/filters-share/3rd_domains.txt
+!
+!
+!
+! Filter: annoyance/filters-share/1st_domains.txt
+!
+!
+!
+! Filter: annoyance/filters-share/general_elemhide.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: annoyance/filters-share/general_url.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/general_url.txt
+!
+!
+!
+! Filter: annoyance/filters-share/specific_URL.txt
+!
+!
+!
+! Filter: annoyance/filters-share/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: annoyance/filters-share/allowlist.txt
+!
+!
+!
+! Filter: annoyance/filters-share/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: annoyance/filters-share/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/specific_REDIRECT.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/scriptlets.txt
+!
+!
+!
+! Filter: annoyance/filters-share/javascript.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/javascript.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/antiadblock.txt
+!
+!
+!
+! Filter: annoyance/filters-share/removeparam.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/allowlist.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/specific_URL.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/3rd_domains.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/1st_domains.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/general_elemhide.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/general_url.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/general_url.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/specific_URL.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/specific_ELEMHIDE.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/allowlist.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/specific_REDIRECT.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/extended_css_ELEMHIDE.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/extended_css_INJECTION.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/scriptlets.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/javascript.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/javascript.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/antiadblock.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/removeparam.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/allowlist.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/specific_URL.txt
+!
+!
+!
+! Filter: adblocking/filters-share/specific_CSS.txt
 !
 m.naver.com#$#.wrap.id_search .comp_container { margin-top: 0px !important; }
 lol.ps#$#div[class*="w-full min-w-[280px] pt-10"] > .p-4.pb-0 div[class*="max-w-[480px]"] { width: 100% !important; max-width: none !important; }
@@ -3913,7 +4164,7 @@ www.erdcloud.com#$#.erd-container { width: 100% !important; }
 ! DOMAIN-REFRESHER: END
 
 !
-! Filter: filters-uBO/specific_CSS.txt
+! Filter: adblocking/filters-uBO/specific_CSS.txt
 !
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2130#issuecomment-1621684566
 apycsports.com#$#.copas_btn { display: none !important; }
@@ -3923,6 +4174,42 @@ apycsports.com#$#.copas_btn { display: none !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
 !
-! Filter: filters-uBO/html_filtering.txt
+! Filter: analytics/filters-share/specific_CSS.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/specific_CSS.txt
+!
+!
+!
+! Filter: annoyance/filters-share/specific_CSS.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/specific_CSS.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-share/specific_CSS.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/specific_CSS.txt
+!
+!
+!
+! Filter: adblocking/filters-uBO/html_filtering.txt
+!
+!
+!
+! Filter: analytics/filters-uBO/html_filtering.txt
+!
+!
+!
+! Filter: annoyance/filters-uBO/html_filtering.txt
+!
+!
+!
+! Filter: antiadblockplus/filters-uBO/html_filtering.txt
 !
 !
