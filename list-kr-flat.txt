@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0925.0
+! Version: 2025.0925.2
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -3582,6 +3582,9 @@ aagag.com#$#.la { height: 75px !important; width: 75px !important; visibility: h
 t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 t.hi098123.com#$#.tabad { top: -100px !important; }
+! dcinside.com
+dcinside.com##+js(remove-cookie, gaejuki_ad)
+dcinside.com##+js(acis, EventTarget.prototype.addEventListener, _ad=)
 !
 chzzkban.xyz##+js(nostif, window.getComputedStyle)
 mylocation.co.kr##+js(nostif, adBlockedMessage)
@@ -4205,7 +4208,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !
 ! Filter: adblocking/filters-uBO/html_filtering.txt
 !
-!
+heye.kr##^script:has-text(/window\.open\([^)]*\);\s*\w+\.focus/)
 !
 ! Filter: analytics/filters-uBO/html_filtering.txt
 !
