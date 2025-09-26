@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.0925.2
+! Version: 2025.0926.2
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -3310,6 +3310,7 @@ zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table=
 !
 ! Filter: adblocking/filters-share/extended_css_INJECTION.txt
 !
+chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 search.daum.net#$?#body.nate aside#mAside > div[disp-attr]:has(> .wing_nate) + div[disp-attr] { margin-top: 0px !important; }
@@ -3453,6 +3454,8 @@ m.humoruniv.com##+js(aost, $.prototype.html, _boom)
 m.humoruniv.com##+js(acis, $.prototype.html, /\/images\/[A-z0-9-_]+\.?(jpg|gif)/)
 ! m.fmkorea.com
 m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
+! chzzk.naver.com
+chzzk.naver.com##+js(json-prune-xhr-response, content.playerAdDisplayResponse, , propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 !
 heye.kr##+js(nowoif, pandalive.co.kr/evt/)
 newneek.co##+js(no-xhr-if, api-v2.adrop.io/request)
