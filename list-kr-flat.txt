@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1013.0
+! Version: 2025.1013.4
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -555,6 +555,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+||cdn.zigcou.com/static/*.webp$domain=2798731938.zigcou.com
 ||news.sbs.co.kr/js/news-player/player.adInfoUrlList.js
 ||11st.co.kr/js/ver/*/powerLink.js
 ||ssl.pstatic.net/t.static.blog/mylog/versioning//js/post/ssp/SspAdContentCallerFor
@@ -1664,6 +1665,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 
+search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(div[id^="view_type_guide_"] button > svg[width="36"] path[d^="M13.596 10.988c0"])
 maplescouter.com##.gap-2 > div[class="min-w-[440px]"]
 maplescouter.com##div[class=""] > .flex-col > .justify-center:has(> div[class$="h-[100px]"])
 search.naver.com##.book_list_wrap li[data-ad="true"]
@@ -3460,6 +3462,7 @@ m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 ! chzzk.naver.com
 chzzk.naver.com##+js(json-prune-xhr-response, content.playerAdDisplayResponse, , propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 !
+2798731938.zigcou.com##+js(trusted-replace-node-text, script, '"isClicked":false', '"isClicked":true', 'includes', '{"props":{"pageProps":{"initialState":{')
 heye.kr##+js(nowoif, pandalive.co.kr/evt/)
 newneek.co##+js(no-xhr-if, api-v2.adrop.io/request)
 map.naver.com##+js(json-prune-xhr-response, layers.[-].metadata.name.{=}.POI_Ads, ,propsToMatch, url:/PCWeb_Real.json)
@@ -3594,8 +3597,11 @@ dcinside.com##+js(acis, EventTarget.prototype.addEventListener, _ad=)
 dcinside.com##+js(nostif, addc.dcinside.com)
 dcinside.com##+js(set-local-storage-item, /adblock_detected/, $remove$)
 dcinside.com##+js(acis, setTimeout, ajax/naverad)
+! chzzkban.xyz
+chzzkban.xyz##+js(no-fetch-if, pagead2.googlesyndication.com method:HEAD)
+chzzkban.xyz##+js(nostif, getComputedStyle)
+chzzkban.xyz##+js(nostif, '!window.__adsToken,')
 !
-chzzkban.xyz##+js(nostif, window.getComputedStyle)
 mylocation.co.kr##+js(nostif, adBlockedMessage)
 ||shana.pe.kr/shana_check/scp*.js$script
 remiz.co.kr##+js(spoof-css, .adsbygoogle, display, block)
