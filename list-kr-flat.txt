@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1022.1
+! Version: 2025.1023.5
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -555,6 +555,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+||cdn.wishket.com/yozmit_ad/ad_image/
 ||cdn.zigcou.com/static/*.webp$domain=2798731938.zigcou.com
 ||news.sbs.co.kr/js/news-player/player.adInfoUrlList.js
 ||11st.co.kr/js/ver/*/powerLink.js
@@ -1393,6 +1394,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! DOMAIN-REFRESHER: START
 !
+||cokcok.stream/public/vast.php
 /^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//$domain=/tvwiki[0-9]+\.net/
 ||wdwd*.com/data/banner/
 ||static.tzstatic.top/z/*.gif
@@ -1667,6 +1669,13 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 
+bada.us##.google_sense
+bada.us##.ad-thumb
+bada.us##div:has(> div[id^="div-gpt-ad"]:only-child)
+web.humoruniv.com###naver_adpost_wrap
+maplescouter.com##div.items-center:empty
+yozm.wishket.com##.grid-in-advertisement > a[href]
+yozm.wishket.com##div.box-border:has(> a[href] > img[alt="advertisement"])
 search.naver.com##div[id^="fdr-"].sc_new .sds-comps-vertical-layout:has(> div[data-power-content-url])
 search.naver.com##div[id^="fdr-"].sc_new .sds-comps-vertical-layout:has(> div[data-power-content-url]) + span
 search.11st.co.kr###section_topAdArea
