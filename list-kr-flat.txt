@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1031.1
+! Version: 2025.1101.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -1739,6 +1739,7 @@ damoang.net###sidebar-site-menu > h3:has(> a[href="https://damoang.net/promotion
 qquing.net##.ad-actual
 pedia.watcha.com##a[href*="//cgv.kr/"][href*="?browser_open_type=external"]
 search.naver.com##div[data-slog-container*="_ad"]
+yna.co.kr##aside:has(> div > amp-ad)
 yna.co.kr##aside[class^="aside-box"]:has(yna-ad-script)
 coupang.com##.ads-line-banner-container
 eyejokerdb.com##div[class$="max-w-[1200px]"].w-full > .rounded-lg
