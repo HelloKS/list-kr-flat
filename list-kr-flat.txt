@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1110.3
+! Version: 2025.1111.2
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -556,6 +556,11 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+||search.danawa.com/js/adSmart.min.js
+||search.danawa.com/js/powerShopping.min.js
+||search.danawa.com/js/powerClick.min.js
+||search.danawa.com/js/powerLink.min.js
+||search.danawa.com/js/temuAd.min.js
 ||asked.kr/pclickframe/
 ||myrealtrip.com/ad/
 ||trip.com/restapi/soa2/*/bjjson/queryAdsDisplayData
@@ -1681,6 +1686,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 
+chzzkban.xyz##div[class*=" "]:is([style^="height:"], [style^="pointer-events:"], [style^="width:"]):has(div[id^="adv-"])
 cgv.co.kr##button[class^="mems01010_phoneLogin__"]
 asked.kr##div[class^="qnaBanner_"]
 asked.kr##div[class^="realclickInner_"]
@@ -1709,7 +1715,6 @@ search.naver.com##.book_list_wrap li[data-ad="true"]
 m.search.naver.com##.book_recommend_list .api_flicking_wrap > div[data-slog-content^="bok_ans:pmax-"]
 search.naver.com##.book_recommend_list .api_flicking_wrap > div[data-effective-adlog]
 search.naver.com##.book_correct .shop_area .item_sub:has(> .sub_inner > .tit_bx > a[href^="https://ader.naver.com/"])
-chzzkban.xyz##main > div:not([class]):has(div[id^="ad-"])
 uwayapply.com##.recom_univ
 uwayapply.com##.media_area
 uwayapply.com##.power_univ
@@ -3301,7 +3306,6 @@ dprime.kr#?##sidebar_container .relative:has([class*="_ad_"]) ~ div[class^="spac
 kayak.co.kr#?#.Ui-Hotels-Results-List-Components-RheaLiteWrapper-container div:not([class]):has(div[class$="-sponsored"])
 m.search.daum.net#?#body.nate .section_cont [disp-attr]:has(> div:matches-css(display: none))
 extmovie.com#?#div[style].xe-widget-wrapper:has(a[href^="/sisaing"])
-velog.io#?#div[class]:has(> ins.adsbygoogle)
 newsis.com#?#.articleView + .aside .smallbox:has(iframe[src^="/view/ad/"])
 m.nocutnews.co.kr#?#div[class$="con_b"]:has(> *:matches-css(display: none))
 cocstorage.com#?#div[class^="css-"]:has(> ins.adsbygoogle)
@@ -3647,6 +3651,7 @@ gall.dcinside.com##+js(remove-node-text, script, /finally *{\n* *document.docume
 chzzkban.xyz##+js(no-fetch-if, pagead2.googlesyndication.com method:HEAD)
 chzzkban.xyz##+js(nostif, getComputedStyle)
 chzzkban.xyz##+js(nostif, '!window.__adsToken,')
+chzzkban.xyz##+js(norafif, window.__adsToken)
 !
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
 mylocation.co.kr##+js(nostif, adBlockedMessage)
