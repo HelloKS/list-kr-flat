@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1112.1
+! Version: 2025.1113.2
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -556,6 +556,9 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+||enuri.com/api/adRelay.jsp
+||enuri.com/wide/script_min/ad/
+||coupang.com/next-api/products/banners?productId=
 ||search.danawa.com/js/adSmart.min.js
 ||search.danawa.com/js/powerShopping.min.js
 ||search.danawa.com/js/powerClick.min.js
@@ -564,7 +567,6 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ||asked.kr/pclickframe/
 ||myrealtrip.com/ad/
 ||trip.com/restapi/soa2/*/bjjson/queryAdsDisplayData
-||json*.dcinside.com/json*/notify_ad.php
 ||gall.dcinside.com/_js/ad.js
 ||gall.dcinside.com/_js/ad_context_powLink.js
 ||filetad.tygem.com/updata/banner/
@@ -1686,6 +1688,9 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 
+enuri.com###coupangCpcSection
+enuri.com##.lp-ad--naver
+gall.dcinside.com,m.dcinside.com##ul[class$="_ad"]
 start.klauncher.kr##.auxiliary-section
 asked.kr##div[class*="ad_"][style*=":"]
 asked.kr##div[class^="inner_"] > div[class^="banner_"]
@@ -3508,6 +3513,7 @@ m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 !
+enuri.com##+js(set, getPowerLink, noopFunc)
 2798731938.zigcou.com##+js(trusted-replace-node-text, script, '"isClicked":false', '"isClicked":true', 'includes', '{"props":{"pageProps":{"initialState":{')
 heye.kr##+js(nowoif, pandalive.co.kr/evt/)
 newneek.co##+js(no-xhr-if, api-v2.adrop.io/request)
