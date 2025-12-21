@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2025.1217.0
+! Version: 2025.1222.1
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -260,6 +260,7 @@
 !
 ! Filter: adblocking/filters-share/1st_domains.txt
 !
+||ad.mojisead.co.kr^
 ||get*bannerads-6egeg2u34q-du.a.run.app^
 ||ad.kakaobank.com^
 ||ad-pulse.kakaobank.cloud^
@@ -560,6 +561,8 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+||web.joongna.com/main-web/_next/static/chunks/ProductAdsBlock
+||common.joongna.com/static/json/exclude-adsense.json
 ||kyobobook.co.kr/api/gw/onk/ad/
 ||contents.kyobobook.co.kr/advrcntr/IMAC/creatives/
 ||p-api.vortexgaming.io/api/banner?
