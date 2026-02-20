@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2026.0130.1
+! Version: 2026.0220.4
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -509,6 +509,8 @@
 namu.wiki,~board.namu.wiki##div[class] > div[class*=" "] > div[class*=" "] ~ div[class*=" "] > div[id][class]:not([class*=" "]):empty
 namu.wiki,~board.namu.wiki##div[class*=" "]:not([class^="_"]) > div[class]:not([class*=" "]) > div[class*=" "]:has(> div[id][class] > div[id][class])
 !
+m.cafe.naver.com##.banner_add:matches-path(/ca-fe\\/web\\/cafes\\/(ghdi58|14062859)(\\/|\\?)/)
+~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/(&|\\.|\\?)clubid=14062859(&|$)/)
 m.cafe.naver.com##.banner_add:matches-path(/ca-fe\\/web\\/cafes\\/(dieselmania|11262350)(\\/|\\?)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/(&|\\.|\\?)clubid=11262350(&|$)/)
 ~m.cafe.naver.com,cafe.naver.com###editorMainContent tr:has(~ tr img[id="userImg8967591"]):matches-path(/(&|\\.|\\?)clubid=10912875(&|$)/)
@@ -571,6 +573,8 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! Filter: adblocking/filters-share/specific_URL.txt
 !
+/mobus/resources/images/route_inquiry_addBoxImg$domain=m.bustago.or.kr
+||m.stock.naver.com/front-api/ad/reward
 ||img.tvchosun.com/news/article/content_ad.js
 ||mapleland.gg/img/Latal
 ||web.joongna.com/main-web/_next/static/chunks/ProductAdsBlock
@@ -1711,6 +1715,8 @@ eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
 
 
+m.bustago.or.kr###safeconnectAddBox
+dundam.xyz##.instv-ad
 algumon.com##.bg-base-100:has(> div.adsense-container > ins.adsbygoogle)
 excellesports.com##.modal_contents .modal_wrap
 m.search.naver.com##div[data-block-id^="review/prs_template_"] .sds-comps-header ~ div[data-template-type="vertical"] .sds-comps-vertical-layout.sds-comps-full-layout:has(> .sds-comps-vertical-layout a[href^="https://ader.naver.com/"])
@@ -3705,6 +3711,7 @@ dicoall.com#@##homead
 dicoall.com#@##ad-lead
 dicoall.com#@##rightAd
 !
+algumon.com##div[id^="deal-"].card ~ .bg-base-100:has(> div[style] > div[class^="fallback svelte-"])
 cheatdot.com##+js(nostif, 'window.getComputedStyle(t).display')
 tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr##+js(nostif, 'getComputedStyle(t).getPropertyValue("visibility")')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
@@ -4071,6 +4078,8 @@ auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 !
 ! Filter: adblocking/filters-share/specific_CSS.txt
 !
+m.bustago.or.kr#$#.InquiryList { height: 100% !important; }
+dundam.xyz#$#.today-grade { width: 100% !important; }
 start.klauncher.kr#$#.main-content { width: calc(100vw - 220px) !important; }
 m.naver.com#$#.wrap.id_search .comp_container { margin-top: 0px !important; }
 lol.ps#$#div[class*="w-full min-w-[280px] pt-10"] > .p-4.pb-0 div[class*="max-w-[480px]"] { width: 100% !important; max-width: none !important; }
