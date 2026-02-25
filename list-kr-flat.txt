@@ -1,6 +1,6 @@
 ! Title: List-KR for uBlock Origin
 ! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2026.0223.0
+! Version: 2026.0225.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -1716,6 +1716,7 @@ eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
 
 
+bbs.ruliweb.com##.board_main ~ div[style^="width: 100%; height: "][style$="align-items: center;"]
 m.bustago.or.kr###safeconnectAddBox
 dundam.xyz##.instv-ad
 algumon.com##.bg-base-100:has(> div.adsense-container > ins.adsbygoogle)
